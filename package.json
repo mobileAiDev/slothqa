@@ -1,0 +1,9 @@
+{
+  "name": "slothqa",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local open-model Android regression agent powered by AI App Bridge",
+  "license": "MIT",
+  "engines": {"node": ">=20"},
+  "scripts": {"test": "node --test test/*.test.cjs", "demo": "node bin/slothqa.cjs simulate --scenario normal", "doctor": "node bin/slothqa.cjs doctor"}
+}

@@ -1,0 +1,14 @@
+{
+  "goal": "Create a task titled Slow and Steady. Save it and verify it appears in the task list. Do not cancel the task. If saving is unavailable, stop.",
+  "allowedText": ["Slow and Steady"],
+  "model": "qwen2.5:1.5b",
+  "endpoint": "http://127.0.0.1:11434/v1",
+  "maxSteps": 10,
+  "assertions": [{"name": "Task is visible in the task list", "selector": {"resourceName": "io.slothqa.demo:id/task_0"}, "expected": {"text": "Task: Slow and Steady"}}],
+  "allowedSelectors": [
+    {"resourceName": "io.slothqa.demo:id/new_task"},
+    {"resourceName": "io.slothqa.demo:id/title"},
+    {"resourceName": "io.slothqa.demo:id/save"},
+    {"resourceName": "io.slothqa.demo:id/confirm"}
+  ]
+}

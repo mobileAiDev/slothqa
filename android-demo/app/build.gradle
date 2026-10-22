@@ -1,0 +1,14 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'io.slothqa.demo'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'io.slothqa.demo'
+        minSdk 23
+        targetSdk 35
+        versionCode 1
+        versionName '0.1.0'
+    }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+}
+dependencies { debugImplementation 'com.github.mobileAiDev.ai-app-bridge:ai-app-bridge-android:0.4.19' }

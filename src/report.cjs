@@ -1,0 +1,20 @@
+'use strict';
+const fs = require('node:fs');
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function writeReport(trace, out) {
+  const events = fs.readFileSync(trace, 'utf8').trim().split('\n').filter(Boolean).map(JSON.parse);
+  const start = events.find(e => e.type === 'run') || {};
+  const end = events.filter(e => e.type === 'verdict').at(-1);
+  const models = events.filter(e => e.type === 'model');
+  const observations = events.filter(e => e.type === 'observation');
+  const cards = observations.map(o => {
+    const m = models.find(e => e.revision === o.revision);
+    const d = events.find(e => e.type === 'decision' && e.revision === o.revision);
+    return `<section class="step"><div><span class="eyebrow">OBSERVATION ${esc(o.revision)}</span><h2>${esc(d?.decision.action.action || end?.verdict || 'Stopped')}</h2><p>${esc(m?.parsed?.reason || end?.reason || '')}</p><p class="muted">${esc(m?.model || '')} · ${esc(m?.latencyMs || 0)} ms</p><pre>${esc(JSON.stringify(d?.decision.action || {}, null, 2))}</pre></div><div class="phone"><div class="status">Sloth Tasks <span>◉</span></div>${(o.summary?.nodes || []).map(n=>`<div class="${n.role === 'button' ? 'button' : n.role === 'input' ? 'input' : 'label'}">${esc(n.text || n.label)}</div>`).join('')}</div></section>`;
+  }).join('');
+  const html = `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SlothQA execution evidence</title><style>
+  *{box-sizing:border-box}body{margin:0;background:#111b19;color:#e7ece4;font:16px/1.65 system-ui,sans-serif}main{max-width:1100px;margin:auto;padding:45px 25px}.eyebrow{color:#b9e284;font-size:12px;letter-spacing:2px}h1{font-size:clamp(42px,7vw,80px);line-height:1.05;margin:22px 0}h2{font-size:29px;margin:12px 0}p{max-width:680px}.notice{border:1px solid #bbd995;padding:15px 20px;border-radius:12px;color:#d3edb6}.stats{display:flex;gap:35px;margin:35px 0}.stats b{display:block;font-size:28px}.muted{color:#a4b5ad}.step{display:grid;grid-template-columns:1fr 320px;gap:35px;border-top:1px solid #385049;padding:35px 0}.phone{background:#f3f2ea;color:#263a30;border-radius:28px;border:8px solid #456153;padding:25px 17px;min-height:300px}.status{font-size:13px;margin-bottom:28px;display:flex;justify-content:space-between}.button{background:#284f3d;color:white;padding:12px;margin:12px 0;border-radius:10px;text-align:center}.input{border:1px solid #8d9f95;padding:12px;border-radius:8px}.label{padding:10px 0}.label:first-of-type{font-size:22px;font-weight:bold}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;background:#1d2d27;padding:18px;border-radius:12px}footer{padding:30px 0;color:#a4b5ad}@media(max-width:700px){.step{grid-template-columns:1fr}.phone{max-width:320px}.stats{flex-wrap:wrap}}
+  </style><main><span class="eyebrow">SLOTHQA · RUN EVIDENCE</span><h1>Less tapping.<br>More proof.</h1><div class="notice">${esc(start.mode === 'simulator' ? 'REAL LOCAL MODEL · SIMULATED DEVICE. Screen drawings below reconstruct simulator observations; they are not Android screenshots.' : 'ANDROID BRIDGE RUN · UI reconstructed from native observations. Review Bridge receipts for device execution.')}</div><p>${esc(start.goal)}</p><div class="stats"><div><b>${esc(end?.verdict || 'incomplete')}</b>Observed verdict</div><div><b>${models.length}</b>Model calls</div><div><b>${Math.round(models.reduce((s,m)=>s+m.latencyMs,0)/1000)}s</b>Model inference time</div></div><p class="muted">Scenario: ${esc(start.scenario || 'native')} · ${esc(start.time)} · Success requires authored assertions; the model cannot declare a pass.</p>${cards}<footer>Open the adjacent trace.jsonl for raw model responses, observations, decisions and assertion results. This is a small demonstration, not a reliability benchmark or a measured human-time comparison.</footer></main></html>`;
+  fs.writeFileSync(out, html); return {out, verdict: end?.verdict || 'incomplete', modelCalls: models.length};
+}
+module.exports = {writeReport};

@@ -1,0 +1,67 @@
+{
+  "created_at": "2026-10-22",
+  "model": {
+    "repo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+    "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "file": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+    "bytes": 1117320736,
+    "sha256": "6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e"
+  },
+  "server": {
+    "project": "llama.cpp",
+    "build": "b11803",
+    "commit": "a37cc4610",
+    "threads": 4,
+    "context": 4096,
+    "device": "CPU"
+  },
+  "bridge": {
+    "version": "0.4.19",
+    "inspected_source_commit": "8cd3467e51bea503a5761fffba36454d82f5bb70",
+    "npm_tarball_sha256": "f4b70cf9cb211f8d262917f7511ca2182ca9d37d34899f68b733b6e83a7f7513"
+  },
+  "node": "v24.19.0",
+  "host": "Linux x86_64",
+  "execution_boundary": "Real local model + real Bridge Intent with simulated device adapter; no physical Android execution",
+  "tests": {
+    "passed": 15,
+    "failed": 0
+  },
+  "runs": [
+    {
+      "scenario": "bridge-broken-save",
+      "model_calls": 5,
+      "model_time_ms": 34817,
+      "verdict": "inconclusive",
+      "reason": "Repeated action without progress",
+      "trace_sha256": "99229c692477810a9b0165e84df360dd4f38b932e4f65d4d932bdda3a2e072ff"
+    },
+    {
+      "scenario": "bridge-changed",
+      "model_calls": 4,
+      "model_time_ms": 26085,
+      "verdict": "complete",
+      "reason": "Independent UI assertions passed",
+      "trace_sha256": "3110523b9560c3ee5f30f1203ce2d47a5833e01f228b7b9f64830135ead6ae46"
+    },
+    {
+      "scenario": "bridge-normal",
+      "model_calls": 3,
+      "model_time_ms": 12646,
+      "verdict": "complete",
+      "reason": "Independent UI assertions passed",
+      "trace_sha256": "1bbc238ed7a766a08b7f6b0b1eec4dc5fcb7e71681c73e4149326a6ac8a55ecf"
+    }
+  ],
+  "android": {
+    "build": "successful",
+    "apk_sha256": "9f97f69dc46865339a79f6beb263b39534588afd3bfdacbf89f81463c2549ed8",
+    "apk_bytes": 1075887,
+    "signature": "verified",
+    "gradle": "8.7",
+    "agp": "8.6.1",
+    "jdk": "Temurin 17.0.20.1+1",
+    "compile_sdk": 35,
+    "physical_device": "not tested"
+  }
+}

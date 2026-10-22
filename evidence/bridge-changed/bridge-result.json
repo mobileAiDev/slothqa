@@ -1,0 +1,218 @@
+{
+  "ok": true,
+  "command": "intent",
+  "operationId": "intent-1792632713502-1",
+  "status": "completed",
+  "revision": 5,
+  "error": null,
+  "lastDecisionId": "d050ccfa-0034-447d-8952-f854c2a399de",
+  "mode": "autonomous",
+  "eventSequence": 9,
+  "events": [
+    {
+      "sequence": 1,
+      "type": "intent_started",
+      "atMs": 1792632713509,
+      "status": "observing",
+      "goal": "Create a task titled Slow and Steady. Save it and verify it appears in the task list. Do not cancel the task. If saving is unavailable, stop."
+    },
+    {
+      "sequence": 2,
+      "type": "waiting_for_decision",
+      "atMs": 1792632713513,
+      "status": "waiting_for_decision",
+      "revision": 1,
+      "evidenceId": "intent:observation:intent-1792632713502-1:1:2"
+    },
+    {
+      "sequence": 3,
+      "type": "waiting_for_decision",
+      "atMs": 1792632719762,
+      "status": "waiting_for_decision",
+      "revision": 2,
+      "decisionId": "b3ef4c50-3e8a-49c4-b6aa-ac134f0640c3"
+    },
+    {
+      "sequence": 4,
+      "type": "waiting_for_decision",
+      "atMs": 1792632726126,
+      "status": "waiting_for_decision",
+      "revision": 3,
+      "decisionId": "6aa8e10c-94e5-4681-bacc-e644a9eac1de"
+    },
+    {
+      "sequence": 5,
+      "type": "waiting_for_decision",
+      "atMs": 1792632733371,
+      "status": "waiting_for_decision",
+      "revision": 4,
+      "decisionId": "727b632a-b5ec-4c6e-8719-e66d8e1181f9"
+    },
+    {
+      "sequence": 6,
+      "type": "waiting_for_decision",
+      "atMs": 1792632739736,
+      "status": "waiting_for_decision",
+      "revision": 5,
+      "decisionId": "16c9464d-2071-4627-a1ae-7c441f7963db"
+    },
+    {
+      "sequence": 7,
+      "type": "stop_requested",
+      "atMs": 1792632739738,
+      "status": "finishing",
+      "requestedStatus": "completed",
+      "error": null
+    },
+    {
+      "sequence": 8,
+      "type": "terminal_decision",
+      "atMs": 1792632739738,
+      "status": "finishing",
+      "agentDecision": "complete",
+      "decisionId": "d050ccfa-0034-447d-8952-f854c2a399de"
+    },
+    {
+      "sequence": 9,
+      "type": "terminal",
+      "atMs": 1792632739740,
+      "status": "completed",
+      "evidenceId": "intent:checkpoint:intent-1792632713502-1:5:25"
+    }
+  ],
+  "eventGap": false,
+  "droppedEvents": 0,
+  "provider": "native",
+  "observationTarget": null,
+  "observationFailure": null,
+  "summary": {
+    "ok": true,
+    "provider": "native",
+    "rawTreeId": "sim:5",
+    "screenshotId": null,
+    "visited": 4,
+    "truncated": false,
+    "reason": null,
+    "coverage": {
+      "source": {
+        "status": "complete",
+        "scope": "foreground-window"
+      },
+      "projection": {
+        "truncated": false,
+        "reason": null
+      }
+    },
+    "nodes": [
+      {
+        "nodeId": "io.slothqa.demo:id/task_0",
+        "sourceIndex": 1,
+        "rawTreeId": "sim:5",
+        "screenshotId": null,
+        "role": "text",
+        "text": "Task: Slow and Steady",
+        "label": "Task: Slow and Steady",
+        "bounds": {
+          "left": 0,
+          "top": 0,
+          "right": 200,
+          "bottom": 50
+        },
+        "enabled": true,
+        "checked": null,
+        "selected": null,
+        "clickable": false,
+        "resourceName": "io.slothqa.demo:id/task_0",
+        "editable": false,
+        "visible": true,
+        "effectiveVisible": true
+      },
+      {
+        "nodeId": "io.slothqa.demo:id/new_task",
+        "sourceIndex": 2,
+        "rawTreeId": "sim:5",
+        "screenshotId": null,
+        "role": "button",
+        "text": "Add a task",
+        "label": "Add a task",
+        "bounds": {
+          "left": 0,
+          "top": 0,
+          "right": 200,
+          "bottom": 50
+        },
+        "enabled": true,
+        "checked": null,
+        "selected": null,
+        "clickable": true,
+        "resourceName": "io.slothqa.demo:id/new_task",
+        "editable": false,
+        "visible": true,
+        "effectiveVisible": true
+      },
+      {
+        "nodeId": "io.slothqa.demo:id/heading",
+        "sourceIndex": 3,
+        "rawTreeId": "sim:5",
+        "screenshotId": null,
+        "role": "text",
+        "text": "Sloth Tasks",
+        "label": "Sloth Tasks",
+        "bounds": {
+          "left": 0,
+          "top": 0,
+          "right": 200,
+          "bottom": 50
+        },
+        "enabled": true,
+        "checked": null,
+        "selected": null,
+        "clickable": false,
+        "resourceName": "io.slothqa.demo:id/heading",
+        "editable": false,
+        "visible": true,
+        "effectiveVisible": true
+      }
+    ]
+  },
+  "evidenceId": "intent:observation:intent-1792632713502-1:5:22",
+  "latestEvidenceIds": {
+    "observation": "intent:observation:intent-1792632713502-1:5:22",
+    "checkpoint": "intent:checkpoint:intent-1792632713502-1:5:25",
+    "summary": "intent:summary:intent-1792632713502-1:5:23",
+    "decision": "intent:decision:intent-1792632713502-1:5:24",
+    "marker": "intent:dispatch-marker:intent-1792632713502-1:4:20",
+    "receipt": "intent:action-receipt:intent-1792632713502-1:4:21"
+  },
+  "timings": {
+    "workerOverheadMs": 0,
+    "targetLeaseWaitMs": 0,
+    "providerAcquireMs": 0,
+    "evidenceCommitMs": 6,
+    "summaryMs": 2,
+    "decisionWaitMs": 26091,
+    "actionMs": 82,
+    "receiptCommitMs": 3,
+    "totalMs": 26235
+  },
+  "agentCalls": 5,
+  "actionSteps": 4,
+  "deadlineMs": 1792633013504,
+  "pendingOperations": 0,
+  "terminalEvidenceId": "intent:checkpoint:intent-1792632713502-1:5:25",
+  "lastAction": {
+    "actionId": "intent-1792632713502-1:16c9464d-2071-4627-a1ae-7c441f7963db",
+    "receiptId": "intent:action-receipt:intent-1792632713502-1:4:21",
+    "error": null,
+    "ambiguous": false,
+    "warnings": [],
+    "foregroundObservations": [],
+    "dispatched": true,
+    "mechanicalStatus": "ok"
+  },
+  "uiObservation": {
+    "available": true,
+    "revision": 5,
+    "stale": false
+  }
+}

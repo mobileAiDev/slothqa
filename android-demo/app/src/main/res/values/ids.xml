@@ -1,0 +1,6 @@
+<resources>
+    <item name="heading" type="id"/><item name="new_task" type="id"/>
+    <item name="title" type="id"/><item name="save" type="id"/>
+    <item name="cancel" type="id"/><item name="confirm" type="id"/>
+    <item name="task_0" type="id"/><item name="error" type="id"/>
+</resources>

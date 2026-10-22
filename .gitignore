@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+!.env.example
+runs/
+*.gguf
+*.log
+android-demo/.gradle/
+android-demo/local.properties
+android-demo/**/build/
+*.keystore
+*.jks

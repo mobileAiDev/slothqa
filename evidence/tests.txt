@@ -1,0 +1,23 @@
+✔ real Bridge Intent lifecycle accepts SlothQA decisions (simulated device, mocked model) (206.728458ms)
+✔ model chooses from current candidates and revision is copied from observation (15.201189ms)
+✔ unobserved model selector cannot be dispatched (0.769954ms)
+✔ text seen only in the editor is not proof of saving (0.711204ms)
+✔ ambiguous, hidden and incomplete assertions never pass (1.044516ms)
+✔ ambiguous controls have no candidate (0.557005ms)
+✔ unknown action outcome stops before another model call (0.823359ms)
+✔ Bridge mechanical failure stops before model call even without ok flag (0.83333ms)
+✔ pre-existing result is not attributed to this run (0.549977ms)
+✔ unapproved input is blocked (1.211488ms)
+✔ model failures do not fall back to a hard-coded plan (0.858725ms)
+✔ model cannot choose a disallowed button (0.674968ms)
+✔ UI instructions cannot override independent completion verifier (0.512769ms)
+✔ loopback-only endpoint protects test data from accidental remote routing (2.354042ms)
+✔ agent instances do not share history across runs (1.083284ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 434.635363
