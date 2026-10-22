@@ -28,7 +28,7 @@ target and evidence reports.
 
 ## Demo
 
-[Watch the 75-second demonstration](https://github.com/mobileAiDev/slothqa/blob/main/demo/slothqa-demo.mp4)
+[Watch the 75-second demonstration](https://mobileaidev.github.io/slothqa/)
 
 The included video is a replay reconstructed from actual execution traces:
 **real local Qwen inference, real AI App Bridge Intent orchestration, simulated

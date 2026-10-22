@@ -29,7 +29,7 @@ repeated Save before the guard stopped it: this MVP does **not** reliably diagno
 the underlying fault. `inconclusive` is distinct from a confirmed product defect.
 Early failed experiments are retained in `evidence/experiments`.
 
-[Watch the 75-second trace replay](https://github.com/mobileAiDev/slothqa/blob/main/demo/slothqa-demo.mp4).
+[Watch the 75-second trace replay](https://mobileaidev.github.io/slothqa/).
 
 Open `evidence/bridge-normal/report.html` or `evidence/bridge-changed/report.html`.
 Every run includes `trace.jsonl` with the actual model response, model name,
