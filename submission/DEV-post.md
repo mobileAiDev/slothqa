@@ -1,6 +1,6 @@
 ---
 title: "SlothQA: let an open model do the tapping, make evidence decide the result"
-published: false
+published: true
 tags: devchallenge, hf26challenge, android, opensource
 ---
 

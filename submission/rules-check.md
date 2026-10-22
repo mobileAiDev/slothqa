@@ -31,13 +31,12 @@
 报告、演示回放、英文模板稿。Android debug APK 已成功构建并验证签名，
 源码含 Gradle Wrapper。新建工作与既有依赖分开并保留来源。
 
-## 公开材料与剩余步骤
+## 公开材料与投稿结果
 
-- 新仓库已创建并上传：https://github.com/mobileAiDev/slothqa
+- 新仓库：https://github.com/mobileAiDev/slothqa
 - 视频播放器与报告：https://mobileaidev.github.io/slothqa/
-- DEV-post.md 已填写实际链接；DEV 尚未投稿。浏览器已连接，但 DEV 当前要求登录。
-- 需登录 DEV、按模板发布唯一一份文章，并记录公开 URL 与发布时间。
-- 若要宣称 Android 真机可用，先按 README 完成设备验收并补充真实录屏。
-  当前材料只声明已执行的模拟设备演示。
-
-GitHub 权限和写入能力已验证；无需重新批准已有授权。
+- DEV 投稿：https://dev.to/_eeb3d2c991c4beffe9001/slothqa-let-an-open-model-do-the-tapping-make-evidence-decide-the-result-2aeg
+- 发布时间：2026-10-22 02:21:15 UTC，即北京时间 10:21:15。
+- 官方模板及 devchallenge、hf26challenge 标签已使用；AI 生成披露已设置。
+- 发布前账号文章列表为空，本次只发布这一篇。发布结果不等于主办方资格审定或获奖。
+- 真机验收仍未执行；当前稿件明确声明模拟设备边界。

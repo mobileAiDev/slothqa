@@ -21,7 +21,7 @@ sequence in the runtime planner and no scripted fallback when the model fails.
 | Android debug APK | Built successfully with AGP 8.6.1, Gradle 8.7, JDK 17 and SDK 35; signature verified |
 | Physical Android device | Not executed in this environment |
 | Public source repository | [mobileAiDev/slothqa](https://github.com/mobileAiDev/slothqa) |
-| DEV publication | Draft; awaiting account login |
+| DEV publication | [Published submission](https://dev.to/_eeb3d2c991c4beffe9001/slothqa-let-an-open-model-do-the-tapping-make-evidence-decide-the-result-2aeg) — October 22, 2026, 02:21 UTC |
 
 These are three small demonstrations, not a benchmark. The model's explanations
 can be wrong even when the selected action is correct. The broken-save run
@@ -157,5 +157,6 @@ See `THIRD_PARTY.md`, `submission/rules-check.md` and `submission/DEV-post.md`.
 The new work is SlothQA; AI App Bridge and Qwen existed earlier and are credited.
 No partner prize category is claimed without a meaningful implemented use.
 The submission draft links to this new public repository and its demonstration video.
-DEV publication is still pending.
+DEV submission was published on October 22, 2026 at 02:21:15 UTC. See
+[the published post](https://dev.to/_eeb3d2c991c4beffe9001/slothqa-let-an-open-model-do-the-tapping-make-evidence-decide-the-result-2aeg) and `submission/published.json`.
 Any post-deadline changes must be recorded here. No post-deadline changes yet.
